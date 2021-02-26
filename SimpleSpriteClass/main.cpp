@@ -2,7 +2,8 @@
 // https://lptcp.blogspot.com
 // FLTK
 /*
-   Sorted project
+   A simple way to create and display "sprites". This is not the full project, please
+   see the zip file for all the graphics like Image and Window.
 */
 //	https://github.com/l-paz91/
 // -----------------------------------------------------------------------------
