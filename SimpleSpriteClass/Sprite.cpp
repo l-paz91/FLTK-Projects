@@ -38,10 +38,10 @@ namespace Graph_lib
 
 		// x screen pos, y screen pos, width, height, xoffset, yoffset
 
-		if (mFrame > 0)
+		if (mFrame >= 0)
 		{
-			int xoffset = (mWidth * mFrame) - mWidth;
-			int yoffset = (mHeight * mFrame) - mHeight;
+			int xoffset = mWidth * mFrame;
+			int yoffset = mHeight * mFrame;
 			int x = int(point(0).x) + xoffset;
 			//int y = int(point(0).y) + yoffset;
 			mSpriteSheet->draw(int(point(0).x), int(point(0).y), 40, 40, xoffset, 0);
