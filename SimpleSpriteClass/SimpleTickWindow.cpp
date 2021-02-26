@@ -28,9 +28,9 @@ namespace Graph_lib
 	void SimpleTickWindow::tick()
 	{
 		// do ticking things here
-		static int frame = 1;
-		if (frame > 4)
-			frame = 1;
+		static int frame = 0;
+		if (frame > 3)
+			frame = 0;
 		mItemBlocks.drawFrame(frame++);
 		
 		// end frame and redraw all objects in window
