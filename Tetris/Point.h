@@ -21,6 +21,9 @@ namespace FltkWrapper
 		Point() : mX(0), mY(0) {}
 
 		Point(double pX, double pY) : mX(pX), mY(pY) {}
+		
+		const int asIntX() const { return int(mX); }
+		const int asIntY() const { return int(mY); }
 
 		double mX;
 		double mY;
