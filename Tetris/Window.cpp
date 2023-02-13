@@ -1,6 +1,7 @@
 // -----------------------------------------------------------------------------
 
 //--INCLUDES--//
+#include "Widget.h"
 #include "Window.h"
 
 // -----------------------------------------------------------------------------
@@ -21,6 +22,22 @@ FltkWrapper::Window::Window(const Point& pPoint, int pWidth, int pHeight, const 
 	, mHeight(pHeight)
 {
 	init();
+}
+
+// -----------------------------------------------------------------------------
+
+void FltkWrapper::Window::attach(Widget& pWidget)
+{
+	Fl_Window::begin();			// FLTK: Begin attaching new Fl_Widgets to this window
+	pWidget.attach(*this);			// let the widget create its own Fl_Widgets
+	Fl_Window::end();			// FLTK: Stop attaching new Fl_Widgets to this window
+}
+
+// -----------------------------------------------------------------------------
+
+void FltkWrapper::Window::detach(Widget& pWidget)
+{
+	pWidget.hide();
 }
 
 // -----------------------------------------------------------------------------
