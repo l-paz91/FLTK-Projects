@@ -18,9 +18,9 @@
 
 namespace FltkWrapper
 {
-	struct Button : public Widget
+	struct BasicButton : public Widget
 	{
-		Button(Point pXY, int pWidth, int pHeight, const char* pLabel, Callback pCallback)
+		BasicButton(Point pXY, int pWidth, int pHeight, const char* pLabel, Callback pCallback)
 			: Widget(pXY, pWidth, pHeight, pLabel, pCallback)
 		{}
 
