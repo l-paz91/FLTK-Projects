@@ -9,9 +9,7 @@
 // -----------------------------------------------------------------------------
 
 //--INCLUDES--//
-#include "Window.h"
-
-#include <Fl/Fl_Box.H>
+#include "TetrisWindow.h"
 
 // -----------------------------------------------------------------------------
 
@@ -19,10 +17,7 @@ int main()
 {
 	using namespace FltkWrapper;
 
-	FltkWrapper::Window simpleWindow(Point(0, 0), 500, 500, "Simple Window Demonstration");
-	Fl_Box box(10, 10, 200, 200, "Hello Simple Window");
-
-	simpleWindow.add(box);
+	TetrisWindow tetrisWindow(Point(0, 0), 500, 500, "Tetris Window");
 
 	return Fl::run();
 }
