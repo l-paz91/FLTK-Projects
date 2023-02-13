@@ -20,6 +20,10 @@
 
 namespace FltkWrapper
 {
+	class Widget;
+
+	// -----------------------------------------------------------------------------
+
 	class Window : public Fl_Window
 	{
 	public:
@@ -38,6 +42,9 @@ namespace FltkWrapper
 		}
 
 		void setLabel(const char* pLabel) { Fl_Window::label(pLabel); }
+		
+		void attach(Widget& pWidget);
+		void detach(Widget& pWidget);
 
 	protected:
 		void draw();
